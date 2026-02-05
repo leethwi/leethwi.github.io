@@ -1,6 +1,5 @@
 ---
-layout: home
+layout: home_custom
 title:
+permalink: /
 ---
-
-여기가 내 기록 공간이다.
