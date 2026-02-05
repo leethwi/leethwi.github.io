@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="home-wrap">
+  <header class="home-header">
+    <a class="home-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+  </header>
+
+  <div class="home-grid">
+    <aside class="home-nav">
+      <nav>
+        <a href="{{ "/categories/" | relative_url }}">categories</a>
+        <a href="{{ "/quotes/" | relative_url }}">quotes</a>
+        <a href="{{ "/taste/" | relative_url }}">taste</a>
+        <a href="{{ "/archive/" | relative_url }}">all</a>
+      </nav>
+    </aside>
+
+    <main class="home-main">
+      {% if site.description %}
+      <p class="home-desc">{{ site.description }}</p>
+      {% endif %}
+
+      <h2 class="home-section">recent</h2>
+      <ul class="home-recent">
+        {% for post in site.posts limit: 30 %}
+          <li>
+            <span class="home-date">{{ post.date | date: "%d %b, %Y" }}</span>
+            <a class="home-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </main>
+  </div>
+</div>
