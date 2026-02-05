@@ -3,17 +3,16 @@
 
 @import "minima";
 
-/* ===== Typewriter Font (Google Fonts) ===== */
+/* ===== Typewriter Font ===== */
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 
-/* ===== Global ===== */
+/* ===== Base ===== */
 :root{
   --bg: #fbf8f2;     /* paper */
-  --text: #171717;   /* ink */
-  --muted: #6b6b6b;
-  --rule: #e3ddd2;
-  --link: #171717;
-  --maxw: 740px;
+  --text: #151515;   /* ink */
+  --muted: #777;
+  --rule: #e8e2d6;
+  --maxw: 720px;
 }
 
 html { font-size: 17px; }
@@ -21,10 +20,10 @@ html { font-size: 17px; }
 body{
   background: var(--bg);
   color: var(--text);
-  font-family: "Special Elite", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Special Elite", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
   line-height: 1.95;
   letter-spacing: 0.02em;
-  text-rendering: optimizeLegibility;
+  margin: 0;
 }
 
 /* ===== Layout ===== */
@@ -34,137 +33,96 @@ body{
   padding-right: 18px;
 }
 
+/* ===== Minimal Header (Title only) ===== */
 .site-header{
-  border-top: 0;
-  border-bottom: 1px solid var(--rule);
-  padding-top: 18px;
+  border: 0;
+  padding-top: 28px;
   padding-bottom: 14px;
-  margin-bottom: 28px;
+  margin-bottom: 42px;
 }
 
 .site-title{
-  color: var(--text);
   font-weight: 400;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-decoration: none;
+  color: var(--text);
 }
 
-.site-nav .page-link{
-  color: var(--muted);
-  font-weight: 400;
-  margin-left: 14px;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-.site-nav .page-link:hover{
-  color: var(--text);
-  border-bottom-color: var(--rule);
+.site-nav{
+  display: none; /* 메뉴 제거 */
 }
 
-/* ===== Home / Lists ===== */
-.post-list{
-  margin-top: 10px;
+/* ===== Posts ===== */
+.post-title{
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
 }
-.post-list > li{
-  margin-bottom: 18px;
-}
-.post-link{
-  color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid var(--rule);
-}
-.post-link:hover{
-  border-bottom-color: #b9b2a6;
-}
+
 .post-meta{
   color: var(--muted);
+  font-size: 0.85em;
+  margin-bottom: 24px;
 }
 
-/* ===== Post ===== */
-.post-title{
-  font-size: 30px;
-  line-height: 1.25;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin-bottom: 10px;
+.post-content p{
+  margin-bottom: 1.4em;
+  text-shadow: 0.01em 0.01em 0 rgba(0,0,0,0.05);
 }
 
-.post-content{
-  font-size: 1rem;
-}
-
-/* Subtle typewriter “imperfect” feel */
-.post-content p,
-.post-content li{
-  text-shadow: 0.01em 0.01em 0 rgba(0,0,0,0.06);
-}
-
-h1, h2, h3, h4{
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-h2{ margin-top: 1.8em; }
-h3{ margin-top: 1.4em; }
-
-/* ===== Links ===== */
+/* ===== Links (solid color, no underline) ===== */
 a{
-  color: var(--link);
+  color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid var(--rule);
+  border: none;
 }
+
 a:hover{
-  border-bottom-color: #b9b2a6;
+  opacity: 0.7;
+}
+
+/* ===== Lists ===== */
+.post-list > li{
+  margin-bottom: 14px;
+}
+
+.post-link{
+  color: var(--text);
 }
 
 /* ===== Blockquote ===== */
 blockquote{
-  color: var(--text);
-  border-left: 3px solid var(--rule);
+  border-left: 2px solid var(--rule);
   padding-left: 14px;
   margin-left: 0;
   font-style: italic;
+  color: var(--text);
 }
 
-/* ===== Rules ===== */
+/* ===== Footer Minimal ===== */
+.site-footer{
+  border: 0;
+  margin-top: 60px;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+/* ===== Remove extra visual noise ===== */
 hr{
   border: 0;
   border-top: 1px solid var(--rule);
 }
 
-/* ===== Code (keep it quiet) ===== */
 pre, code{
   font-family: inherit;
   font-size: 0.95em;
-}
-pre{
   background: #f4efe6;
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-}
-code{
-  background: #f4efe6;
-  border: 1px solid var(--rule);
   border-radius: 6px;
-  padding: 0.05em 0.35em;
-}
-
-/* ===== Footer ===== */
-.site-footer{
-  border-top: 1px solid var(--rule);
-  margin-top: 44px;
-  color: var(--muted);
-}
-.site-footer a{
-  border-bottom-color: transparent;
-}
-.site-footer a:hover{
-  border-bottom-color: var(--rule);
 }
 
 /* ===== Mobile ===== */
 @media (max-width: 600px){
   html { font-size: 16px; }
-  .post-title{ font-size: 26px; }
-  .site-nav .page-link{ margin-left: 10px; }
+  .post-title{ font-size: 24px; }
 }
