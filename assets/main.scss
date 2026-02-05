@@ -208,3 +208,49 @@ pre, code{
   flex-direction: column;
   gap: 6px;
 }
+
+/* hide default minima header/footer (to avoid duplicates) */
+.site-header { display: none !important; }
+.site-footer { display: none !important; }
+
+/* home: vertical category list like jytk */
+.home-categories{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 18px 0 34px 0;
+}
+
+.home-categories a{
+  display: block;
+  color: #151515;
+  text-decoration: none;
+}
+
+.home-nav nav{
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.site-header { display: none !important; }
+.site-footer { display: none !important; }
+
+.home-categories{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 18px 0 34px 0;
+}
+
+.home-categories a{
+  display: block;
+  color: #151515;
+  text-decoration: none;
+}
+
+.home-nav nav{
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
