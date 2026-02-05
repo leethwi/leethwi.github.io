@@ -202,3 +202,9 @@ pre, code{
   .home-nav nav{ flex-direction: row; gap: 12px; flex-wrap: wrap; }
   .home-recent li{ grid-template-columns: 1fr; gap: 6px; }
 }
+
+.home-nav nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
