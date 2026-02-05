@@ -3,34 +3,33 @@ layout: default
 ---
 
 <div class="home-wrap">
-  <header class="home-header">
-    <a class="home-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-  </header>
 
-  <div class="home-grid">
-    <aside class="home-nav">
-      <nav>
-        <a href="{{ "/categories/" | relative_url }}">categories</a>
-        <a href="{{ "/quotes/" | relative_url }}">quotes</a>
-        <a href="{{ "/taste/" | relative_url }}">taste</a>
-        <a href="{{ "/archive/" | relative_url }}">all</a>
-      </nav>
-    </aside>
+  <!-- 제목 -->
+  <h1 class="home-title">{{ site.title }}</h1>
 
-    <main class="home-main">
-      {% if site.description %}
-      <p class="home-desc">{{ site.description }}</p>
-      {% endif %}
+  <!-- 설명 -->
+  <p class="home-desc">{{ site.description }}</p>
 
-      <h2 class="home-section">recent</h2>
-      <ul class="home-recent">
-        {% for post in site.posts limit: 30 %}
-          <li>
-            <span class="home-date">{{ post.date | date: "%d %b, %Y" }}</span>
-            <a class="home-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </main>
+  <!-- 카테고리 메뉴 -->
+  <div class="home-categories">
+    <a href="/archive/">all</a>
+    <a href="/categories/dairy/">dairy</a>
+    <a href="/categories/books/">books</a>
+    <a href="/categories/exercises/">exercises</a>
+    <a href="/categories/quotes/">quotes</a>
+    <a href="/categories/like/">like</a>
   </div>
+
+  <!-- recent -->
+  <h2 class="home-section">recent</h2>
+
+  <ul class="home-recent">
+    {% for post in site.posts limit: 20 %}
+      <li>
+        {{ post.date | date: "%d %b, %Y" }}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
 </div>
