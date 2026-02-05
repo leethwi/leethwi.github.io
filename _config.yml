@@ -1,2 +1,8 @@
 title: leethwi
 theme: minima
+description: Notes on thinking, living, and work.
+permalink: /:categories/:year/:month/:day/:title/
+
+header_pages:
+  - about.md
+  - archive.md
