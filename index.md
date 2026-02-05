@@ -1,8 +1,6 @@
 ---
 layout: home
-title: Home
+title:
 ---
-
-# Welcome
 
 여기가 내 기록 공간이다.
